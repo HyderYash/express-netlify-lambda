@@ -58,7 +58,7 @@ class Helper {
 
   listAllSKUS = () => {
     return new Promise(async (resolve, reject) => {
-      let importCheckUrl = `${process.env.CL_BASE_ENDPOINT}/api/skus/BALKSQNqdL`;
+      let importCheckUrl = `${process.env.CL_BASE_ENDPOINT}/api/skus?page[size]=1`;
       await fetch(importCheckUrl, {
         headers: this.clAuthHeader(),
       })
@@ -68,7 +68,7 @@ class Helper {
             this.logger(data.errors[0].detail);
             reject(data.errors);
           }
-          resolve(data);
+          resolve(data.data[0].attributes);
         });
     });
   };
