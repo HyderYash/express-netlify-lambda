@@ -19,7 +19,9 @@ router.get("/listallskus", async (req, res) => {
   await helper.getCommerceLayerAccessToken();
   helper.logger("Access Token fetched...");
   const retVal = await helper.listAllSKUS();
-  res.status(200).json({ message: "Working...", SKUS: retVal });
+  res
+    .status(200)
+    .json({ message: "Working...", DATETIME: new Date(), SKUS: retVal });
 });
 
 app.use("/.netlify/functions/app", router);

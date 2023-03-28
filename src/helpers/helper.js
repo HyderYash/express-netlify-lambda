@@ -35,7 +35,7 @@ class Helper {
   };
 
   logger = (msg = "", msgColor = "green", apiURL = "", statusCode = "") => {
-    console.log(msg);
+    console.log(msg + " =>>>>>>>> " + new Date());
   };
 
   checkImportStatus = () => {
