@@ -1,0 +1,24 @@
+{
+  "name": "local-commercelayer-import-single",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "netlify-lambda serve src",
+    "build": "netlify-lambda build src"
+  },
+  "keywords": [],
+  "author": "Ram Jee Krishna",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.16.4",
+    "netlify-lambda": "^1.6.3",
+    "node-fetch": "^2.6.7",
+    "serverless-http": "^1.10.1"
+  }
+}

@@ -1,0 +1,6 @@
+[build]
+    functions = "functions"
+[build.environment]
+    CL_CLIENT_ID = "9F0Mg0HOSdGaCgnDoOSBvP7jctCRGT_odapPHLgGWLU"
+    CL_CLIENT_SECRET = "z9XoooSOU5bIx-2CNX6vL9RmPlncMJAZHEAOIsYE18w"
+    CL_BASE_ENDPOINT = "https://ez-contacts.commercelayer.io"
