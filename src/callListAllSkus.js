@@ -1,6 +1,8 @@
+const { schedule } = require("@netlify/functions");
+
 const fetch = require("node-fetch").default;
 
-export const handler = async () => {
+const handler = async () => {
   const baseUrl =
     "https://incredible-cocada-df49b8.netlify.app/.netlify/functions/app/listallskus";
   const response = await fetch(baseUrl, {
@@ -13,3 +15,4 @@ export const handler = async () => {
     body: JSON.stringify(response),
   };
 };
+exports.handler = schedule("*/1 * * * *", handler);
