@@ -58,7 +58,7 @@ class Helper {
 
   listAllSKUS = () => {
     return new Promise(async (resolve, reject) => {
-      let importCheckUrl = `${process.env.CL_BASE_ENDPOINT}/api/skus/`;
+      let importCheckUrl = `${process.env.CL_BASE_ENDPOINT}/api/skus/BALKSQNqdL`;
       await fetch(importCheckUrl, {
         headers: this.clAuthHeader(),
       })

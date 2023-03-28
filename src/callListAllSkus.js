@@ -8,6 +8,7 @@ export const handler = async () => {
   })
     .then((res) => res.json())
     .catch((err) => console.error(err));
+  console.log(response);
   return {
     statusCode: 200,
     body: JSON.stringify(response),
