@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "netlify-lambda serve src",
+    "dev": "cross-env NODE_ENV=development nodemon src/app.js",
     "build": "netlify-lambda build src"
   },
   "keywords": [],
@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
     "dotenv": "^16.0.3",
     "encoding": "^0.1.13",
     "express": "^4.16.4",

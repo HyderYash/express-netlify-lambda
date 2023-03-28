@@ -23,5 +23,10 @@ router.get("/listallskus", async (req, res) => {
 });
 
 app.use("/.netlify/functions/app", router);
-
-module.exports.handler = serverless(app);
+if (process.env.NODE_ENV === "development") {
+  app.listen(3000, () => {
+    console.log("SERVER IS LISTENING ON http://localhost:3000");
+  });
+} else {
+  module.exports.handler = serverless(app);
+}
