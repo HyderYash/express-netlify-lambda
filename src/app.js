@@ -11,7 +11,13 @@ router.get("/", async (req, res) => {
   await helper.getCommerceLayerAccessToken();
   helper.logger("Access Token fetched...");
   const retVal = await helper.checkImportStatus();
-  res.status(200).json({ message: "Working...", IMPORT_RUNNING: retVal });
+  res
+    .status(200)
+    .json({
+      message: "Working...",
+      DATETIME: new Date(),
+      IMPORT_RUNNING: retVal,
+    });
 });
 
 router.get("/listallskus", async (req, res) => {

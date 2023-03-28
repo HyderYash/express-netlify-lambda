@@ -13,6 +13,7 @@ class Helper {
         }),
       }).then(async (response) => {
         let { access_token } = await response.json();
+        console.log(access_token);
         this.accessToken = access_token;
       });
     } catch (err) {
